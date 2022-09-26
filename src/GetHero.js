@@ -23,7 +23,7 @@ export default function GetHero() {
         heroes.map(hero => {
           return (
             <div key={hero.id} style={{border: "1px solid black", width: "max-content", padding: "4px", margin: "4px"}}>
-              <p>{"#" + hero.id + ": " + hero.heroName}</p>
+              <p style={{backgroundColor: "green"}}>{"#" + hero.id + ": " + hero.heroName}</p>
               <p>{"Name: " + hero.firstName + " " + hero.lastName}</p>
               <p>{"From: " + hero.place}</p>
               <button onClick={e => deleteHero(e, hero.id)}>Delete this hero</button>

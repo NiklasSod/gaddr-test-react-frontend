@@ -25,23 +25,25 @@ export default function AddHero() {
   };
 
   return (
-    <form 
-      style={{position: 'absolute', right: 0, top: 0, marginRight: '8em', marginTop: '4em', border: '2px solid black'}}
-      onSubmit={(e) => addHeroToDb(e)}
-    >
-      <label>Heroname: </label>
-      <input onChange={(e) => handleInputs(e)} type="text" name="heroName"></input>
-      <br />
-      <label>Firstname: </label>
-      <input onChange={(e) => handleInputs(e)} type="text" name="firstName"></input>
-      <br />
-      <label>Lastname: </label>
-      <input onChange={(e) => handleInputs(e)} type="text" name="lastName"></input>
-      <br />
-      <label>Place: </label>
-      <input onChange={(e) => handleInputs(e)} type="text" name="place"></input>
-      <br />
-      <button type="submit">Add Hero</button>
-    </form>
+    <div style={{position: 'absolute', right: 0, top: 0, marginRight: '8em', marginTop: '4em', border: '2px solid black'}}>
+      <h4 style={{textAlign: 'center', padding: '0.4em'}}>Add a new hero to db</h4>
+      <form
+        onSubmit={(e) => addHeroToDb(e)}
+      >
+        <label>Heroname: </label>
+        <input onChange={(e) => handleInputs(e)} type="text" name="heroName"></input>
+        <br />
+        <label>Firstname: </label>
+        <input onChange={(e) => handleInputs(e)} type="text" name="firstName"></input>
+        <br />
+        <label>Lastname: </label>
+        <input onChange={(e) => handleInputs(e)} type="text" name="lastName"></input>
+        <br />
+        <label>Place: </label>
+        <input onChange={(e) => handleInputs(e)} type="text" name="place"></input>
+        <br />
+        <button type="submit">Add Hero</button>
+      </form>
+    </div>
   )
 };
