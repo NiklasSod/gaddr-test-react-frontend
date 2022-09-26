@@ -6,7 +6,6 @@ export default function GetHero() {
 
   const deleteHero = (e, id) => {
     e.preventDefault();
-    console.log(id)
     axios.delete(`https://localhost:7227/api/superhero?id=${id}`);
     window.location.reload();
   };
@@ -14,7 +13,6 @@ export default function GetHero() {
   useEffect(() => {
     axios.get('https://localhost:7227/api/superhero').then((res) => {
       setHeroes(res.data);
-      console.log(res.data);
     });
   }, []);
 

@@ -25,7 +25,7 @@ export default function AddHero() {
 
   return (
     <form 
-      style={{position: 'absolute', right: 0, top: 0, marginRight: '30px', border: '1px solid black'}}
+      style={{position: 'absolute', right: 0, top: 0, marginRight: '8em', marginTop: '4em', border: '2px solid black'}}
       onSubmit={(e) => addHeroToDb(e)}
     >
       <label>Heroname: </label>
