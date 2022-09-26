@@ -1,3 +1,4 @@
+import AddHero from "./AddHero";
 import GetHero from "./GetHero";
 
 function App() {
@@ -5,8 +6,8 @@ function App() {
     <div className="App">
       <h2>React client</h2>
       <p>communicating with ASP.NET Core</p>
-      <GetHero/>
-
+      <GetHero />
+      <AddHero />
     </div>
   );
 }
