@@ -1,17 +1,18 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { urlSuperHero } from './endpoints';
 
 export default function GetHero() {
   const [heroes, setHeroes] = useState([]);
 
   const deleteHero = (e, id) => {
     e.preventDefault();
-    axios.delete(`https://localhost:7227/api/superhero?id=${id}`);
+    axios.delete(`${urlSuperHero}?id=${id}`);
     window.location.reload();
   };
 
   useEffect(() => {
-    axios.get('https://localhost:7227/api/superhero').then((res) => {
+    axios.get(urlSuperHero).then((res) => {
       setHeroes(res.data);
     });
   }, []);

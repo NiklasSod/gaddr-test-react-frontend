@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { urlSuperHero } from './endpoints';
 
 export default function AddHero() {
   const [newHero, setNewHero] = useState({
@@ -17,7 +18,7 @@ export default function AddHero() {
   const addHeroToDb = (e) => {
     e.preventDefault();
     axios
-      .post('https://localhost:7227/api/superhero', newHero)
+      .post(urlSuperHero, newHero)
       .then(() => {
         window.location.reload();
       });
